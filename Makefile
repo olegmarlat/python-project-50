@@ -3,7 +3,7 @@ install:
 
 test:
     poetry run pytest
-	
+
 gendiff:
     poetry run gendiff
 
@@ -18,4 +18,4 @@ package-install:
 
 
 make lint:
-	poetry run flake8
+	poetry run flake8 gendiff
