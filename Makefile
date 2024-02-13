@@ -2,10 +2,10 @@ install:
 	poetry install
 
 test:
-    poetry run pytest
+	poetry run pytest
 
 gendiff:
-    poetry run gendiff
+	poetry run gendiff
 
 build:
 	poetry build
