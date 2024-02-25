@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "\"hexlet-code\""
+description = ""
 authors = ["Oleg Latypov <latol179@mail.ru>"]
 readme = "README.md"
 packages = [
@@ -9,7 +9,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8, <4.0"
+python = "3.10.12"
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
