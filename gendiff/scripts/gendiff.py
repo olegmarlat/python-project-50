@@ -14,7 +14,6 @@ def main():
     args = parser.parse_args()
     print(args)
 
-
 diff = generate_diff(file_path1, file_path2)
 print(diff)
 
