@@ -1,2 +1,2 @@
-def generate_diff():
-    return None
+from gendiff.gendiff import generate_diff
+
