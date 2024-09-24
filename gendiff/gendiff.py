@@ -8,3 +8,5 @@
 #    dict_2 = get_data(file_2)
 #    diff = build_diff(dict_1, dict_2)
 #    return format_diff(diff, format)
+def generate_diff():
+    return None
