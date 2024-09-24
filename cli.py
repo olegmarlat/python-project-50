@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
-
 import argparse
 
 
-def main():
+def parser_args():
     parser = argparse.ArgumentParser(
         description='Compares two configuration files and shows a difference.'
     )
@@ -13,6 +11,4 @@ def main():
     args = parser.parse_args()
     print(args)
 
-
-if __name__ == "__main__":
-    main()
+    return args.first_file, args.second_file, args.format
