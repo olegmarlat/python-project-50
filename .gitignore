@@ -6,3 +6,7 @@ dist/
 .coverage.xml
 .pytest_cache/
 *./egg-info
+
+dist/hexlet_code-0.1.0-py3-none-any.whl 
+dist/hexlet-code-0.1.0.tar.gz
+.cpython-310.pyc
