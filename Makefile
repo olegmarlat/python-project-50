@@ -4,10 +4,13 @@ install:
 test:
 	poetry run pytest
 
+test-coverage:
+	poetry run pytest --cov=hexlet_python_package --cov-report xml
+
 gendiff:
 	poetry run gendiff
 
-build:
+build: check
 	poetry build
 
 publish:
@@ -22,3 +25,5 @@ make lint:
 selfcheck: poetry check
 
 check: selfcheck test lint
+
+.PHONY: install test lint selfcheck check build
