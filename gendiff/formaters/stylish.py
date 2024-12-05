@@ -1,6 +1,3 @@
-from unittest import result
-
-
 def generate_indent(depth):
     indent_size = 4
     return '' * (depth * indent_size)
@@ -18,13 +15,13 @@ def format_value(value, indent_level):
     elif value is None:
         return 'null'
     elif isinstance(value, bool):
-       return 'true' if value else 'false'
+        return 'true' if value else 'false'
     else:
         return str(value)
 
-def convert_to_stylish(diff, depth = 1, nested=None):
+def convert_to_stylish(diff, depth=1):
     indent = generate_indent(depth)
-    result[]
+    result = ['']
 
     for item in diff:
         key = item['key']
