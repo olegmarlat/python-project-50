@@ -21,7 +21,7 @@ def format_value(value, indent_level):
 
 def convert_to_stylish(diff, depth=1):
     indent = generate_indent(depth)
-    result = ['']
+    result = []
 
     for item in diff:
         key = item['key']
@@ -29,10 +29,10 @@ def convert_to_stylish(diff, depth=1):
 
         if status == 'nested':
             convert_to_stylish(item['nested'], depth + 1)
-            result.append(f"{indent}{key}:{nested}")
+            result.append(f"{indent}{key}: {'nested'}")
         elif status == 'added':
             new_value = format_value(item['nested'], depth + 1)
-            result.append(f"{indent}{key}:{nested}")
+            result.append(f"{indent}{key}:{'nested'}")
         elif status == 'added':
             new_value = format_value(item['new_value'], depth)
             result.append(f"{indent[:-2]} + {key}:{new_value}")
