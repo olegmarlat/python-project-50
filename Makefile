@@ -1,29 +1,38 @@
 install:
 	poetry install
 
-test:
-	poetry run pytest
-
-test-coverage:
-	poetry run pytest --cov=hexlet_python_package --cov-report xml
-
-gendiff:
-	poetry run gendiff
-
-build: check
+build:
 	poetry build
 
 publish:
 	poetry publish --dry-run
 
 package-install:
-	python3 -m pip install --user dist/*.whl
+	python3 -m pip install --force-reinstall dist/*.whl
 
-make lint:
+lint:
 	poetry run flake8 gendiff
+	poetry run flake8 tests
 
-selfcheck: poetry check
+diff:
+	poetry run gendiff tests/fixtures/file1.json tests/fixtures/file2.json
 
-check: selfcheck test lint
+diff_plain:
+	poetry run gendiff tests/fixtures/file1.yml tests/fixtures/file2.yml -f plain
 
-.PHONY: install test lint selfcheck check build
+diff_json:
+	poetry run gendiff tests/fixtures/file1.yml tests/fixtures/file2.yml -f json
+
+test:
+	poetry run pytest
+
+check:
+	poetry run flake8 gendiff
+	poetry run flake8 tests
+	poetry run pytest
+
+test-cov:
+	poetry run coverage run -m pytest
+	poetry run coverage report
+
+.PHONY: install build publish package-install lint diff diff-json diff-plain test test-coverage check
