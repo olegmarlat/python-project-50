@@ -32,8 +32,8 @@ def convert_to_stylish(diff, depth=1):
             convert_to_stylish(item["nested"], depth + 1)
             result.append(f"{indent}{key}: {'nested'}")
         elif status == "added":
-            new_value = format_value(item["nested"], depth + 1)
-            result.append(f"{indent}{key}:{'nested'}")
+            new_value = format_value(item['added'], depth + 1)
+            result.append(f"{indent}{key}:{'added'}")
         elif status == "added":
             new_value = format_value(item["new_value"], depth)
             result.append(f"{indent[:-2]} + {key}:{new_value}")
