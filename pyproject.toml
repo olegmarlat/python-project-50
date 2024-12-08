@@ -5,21 +5,21 @@ description = ""
 authors = ["Oleg Latypov <latol179@mail.ru>"]
 readme = "README.md"
 packages = [
-  { include = "gendiff" },
+  { include = "gendiff" }
 ]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
+pyyaml = "^6.0"
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
-
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
 flake8 = "^6.1.0"
 pytest-cov = "^4.1.0"
-
+pyyaml = "^6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
