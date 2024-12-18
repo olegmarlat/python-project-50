@@ -34,10 +34,12 @@ def build_diff(dict1, dict2):
                 }
             )
         else:
-            diff.append({
-                'key': key,
-                'status': 'unchanged',
-                'old_value': dict1[key]
-            })
+            diff.append(
+                {
+                    'key': key,
+                    'status': 'unchanged',
+                    'old_value': dict1[key]
+                }
+            )
 
     return diff
