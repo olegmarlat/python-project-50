@@ -6,17 +6,43 @@ from gendiff import generate_diff
 BASE_DIR = Path(__file__).parent
 
 
-@pytest.mark.parametrize(
-    "file1_path, file2_path, expected, format",
-    [
-        ("file1_1.json," "file2_1.json", "stylish.txt", "stylish"),
-        ("file1_1.yml," "file2_1.yml", "stylish.yml", "stylish"),
-        ("file1_1.json," "file2_1.json", "plain.txt", "plain"),
-        ("file1_1.yml," "file2_1.yml", "plain.txt", "plain"),
-        ("file1_1.json," "file2_1.json", "json.txt", "json"),
-        ("file1_1.yml," "file2_1.yml", "json.txt", "json"),
-    ],
-)
+@pytest.mark.parametrize("file1, file2, expected, format", [
+    (
+        "file1.json",
+        "file2.json",
+        "stylish.txt",
+        "stylish"
+    ),
+    (
+        "file1.yml",
+        "file2.yml",
+        "stylish.txt",
+        "stylish"),
+    (
+        "file3.json",
+        "file4.json",
+        "plain.txt",
+        "plain"
+    ),
+    (
+        "file5.yml",
+        "file6.yml",
+        "plain.txt",
+        "plain"
+    ),
+    (
+        "file3.json",
+        "file4.json",
+        "json.txt",
+        "json"
+    ),
+    (
+        "file5.yml",
+        "file6.yml",
+        "json.txt",
+        "json"
+    ),
+])
 def test_gendiff(file1, file2, expected, format):
     file1_path = os.path.join(BASE_DIR, "fixtures", file1)
     file2_path = os.path.join(BASE_DIR, "fixtures", file2)
