@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).parent
 
 
 @pytest.mark.parametrize(
-    "file1, file2, expected, format",
+    "file1_path, file2_path, expected, format",
     [
         ("file1_1.json," "file2_1.json", "stylish.txt", "stylish"),
         ("file1_1.yml," "file2_1.yml", "stylish.yml", "stylish"),
