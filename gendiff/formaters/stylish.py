@@ -7,15 +7,15 @@ def format_value(value, indent_level):
     indent = generate_indent(indent_level)
     if isinstance(value, dict):
         items = [
-            f"{indent} {k}: {format_value(value, indent_level+1)}"
+            f"{indent}    {k}: {format_value(value, indent_level+1)}"
             for k, value in value.items()
         ]
         items_str = "\n".join(items)
-        return f"{{\n{items_str} \n {indent}}}"
+        return f"{{\n{items_str}\n{indent}}}"
     elif value is None:
-        return "null"
+        return 'null'
     elif isinstance(value, bool):
-        return "true" if value else "false"
+        return 'true' if value else 'false'
     else:
         return str(value)
 
@@ -25,25 +25,22 @@ def convert_to_stylish(diff, depth=1):
     result = []
 
     for item in diff:
-        key = item["key"]
-        status = item["status"]
+        key = item['key']
+        status = item['status']
 
-        if status == "nested":
-            convert_to_stylish(item["nested"], depth + 1)
+        if status == 'nested':
+            convert_to_stylish(item['nested'], depth + 1)
             result.append(f"{indent}{key}: {'nested'}")
-        elif status == "added":
-            new_value = format_value(item["key"], depth + 1)
-            result.append(f"{indent}{key}:{'new_value'}")
-        elif status == "added":
-            new_value = format_value(item["new_value"], depth)
-            result.append(f"{indent[:-2]} + {key}:{'new_value'}")
+        elif status == 'added':
+            new_value = format_value(item['new_value'], depth)
+            result.append(f"{indent[:-2]} + {key}:{new_value}")
         elif status == "removed":
-            old_value = format_value(item["key"], depth)
-            result.append(f"{indent[:-2]} - {key} :{'old_value'}")
+            old_value = format_value(item['old_value'], depth)
+            result.append(f"{indent[:-2]} - {key} :{old_value}")
         elif status == "updated":
             old_value = format_value(item["old_value"], depth)
             new_value = format_value(item["new_value"], depth)
-            result.append(f"{indent[:-2]} - {key} :{'old_value'}")
+            result.append(f"{indent[:-2]} - {key} :{old_value}")
             result.append(f"{indent[:-2]} + {key} :{new_value}")
         elif status == "unchanged":
             old_value = format_value(item["old_value"], depth)
