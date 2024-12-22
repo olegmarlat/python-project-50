@@ -6,7 +6,7 @@ from gendiff import generate_diff
 BASE_DIR = Path(__file__).parent
 
 
-@pytest.mark.parametrize("file1, file2, expected, format", [
+@pytest.mark.parametrize("file_1, file_2, expected, format", [
     (
         "file1.json",
         "file2.json",
@@ -43,11 +43,11 @@ BASE_DIR = Path(__file__).parent
         "json"
     ),
 ])
-def test_gendiff(file1, file2, expected, format):
-    file1_path = os.path.join(BASE_DIR, "fixtures", file1)
-    file2_path = os.path.join(BASE_DIR, "fixtures", file2)
+def test_gendiff(file_1, file_2, expected, format):
+    file_1_path = os.path.join(BASE_DIR, "fixtures", file_1)
+    file_2_path = os.path.join(BASE_DIR, "fixtures", file_2)
     expected_path = os.path.join(BASE_DIR, "fixtures", expected)
 
-    result = generate_diff(file1_path, file2_path, format)
+    result = generate_diff(file_1_path, file_2_path, format)
     with open(expected_path, "r") as expected_file:
         assert result == expected_file.read()
