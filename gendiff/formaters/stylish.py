@@ -35,11 +35,11 @@ def convert_to_stylish(diff, depth=1):
             new_value = format_value(item["value"], depth)
             result.append(f"{indent[:-2]}+ {key}: {new_value}")
         elif status == "removed":
-            old_value = format_value(item["value"], depth)
-            result.append(f"{indent[:-2]}- {key}: ")
+            old_value = format_value(item["old_value"], depth)
+            result.append(f"{indent[:-2]}- {key}:  {old_value}")
         elif status == "updated":
-            old_value = format_value(item["value"], depth)
-            new_value = format_value(item["value"], depth)
+            old_value = format_value(item["old_value"], depth)
+            new_value = format_value(item["new_value"], depth)
             result.append(f"{indent[:-2]}- {key}: {old_value}")
             result.append(f"{indent[:-2]}+ {key}: {new_value}")
         elif status == "unchanged":
