@@ -32,7 +32,7 @@ def convert_to_stylish(diff, depth=1):
             nested = convert_to_stylish(item["nested"], depth + 1)
             result.append(f"{indent}{key}: {nested}")
         elif status == "added":
-            new_value = format_value(item["new_value"], depth)
+            new_value = convert_to_stylish(item["new_value"], depth)
             result.append(f"{indent[:-2]}+ {key}: {new_value}")
         elif status == "removed":
             old_value = format_value(item["old_value"], depth)
