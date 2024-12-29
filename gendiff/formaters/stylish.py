@@ -1,13 +1,13 @@
 def generate_indent(depth):
     indent_size = 4
-    return " " * (depth + indent_size)
+    return " " * (depth * indent_size)
 
 
 def format_value(value, indent_level):
     indent = generate_indent(indent_level)
     if isinstance(value, dict):
         items = [
-            f"{indent}    {k}: {format_value(t, indent_level+1)}"
+            f"{indent}{k}: {format_value(t, indent_level+1)}"
             for k, t in value.items()
         ]
         items_str = "\n".join(items)
