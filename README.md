@@ -7,5 +7,4 @@
 
 
 
-[![Test Coverage](https://codeclimate.com/github/olegmarlat/python-project-50/test_coverage
-)](https://api.codeclimate.com/v1/badges/3746f37b938d760e3c51/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/3746f37b938d760e3c51/test_coverage)](https://codeclimate.com/github/olegmarlat/python-project-50/test_coverage)
