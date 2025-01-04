@@ -1,5 +1,5 @@
 install:
-		poetry install
+	poetry install
 build:
 	poetry build
 
@@ -27,6 +27,5 @@ selfcheck:
 check:
 	selfcheck test lint
 
-.PHONY:
-	install test lint selfcheck check build
+.PHONY:	install test lint selfcheck check build
 
