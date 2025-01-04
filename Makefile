@@ -28,5 +28,6 @@ selfcheck:
 check:
         selfcheck test lint
 
-.PHONY: install test lint selfcheck check build
+.PHONY:
+        install test lint selfcheck check build
 
