@@ -1,4 +1,4 @@
-from gendiff.formaters.stylish import convert_to_stylish
+from gendiff.formaters.stylishh import convert_to_stylish
 from gendiff.formaters.plain import convert_to_plain
 from gendiff.formaters.json import convert_to_json
 
