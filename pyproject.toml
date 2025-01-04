@@ -4,12 +4,11 @@ version = "0.1.0"
 description = ""
 authors = ["Oleg Latypov <latol179@mail.ru>"]
 readme = "README.md"
-packages = [
-  { include = "gendiff" }
-]
+packages = [{include = "gendiff"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pytest-cov = "^5.0.0"
 pyyaml = "^6.0"
 
 [tool.poetry.scripts]
@@ -22,5 +21,6 @@ pytest-cov = "^4.1.0"
 pyyaml = "^6.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
