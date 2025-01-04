@@ -12,4 +12,14 @@
 + `gendiff *first_file* *second_file* -f plain`: diff is multiline text.
 
 + `gendiff *first_file* *second_file* -f json`: diff is a json object.
-
+### Demo
+#### JSON files
+[![asciicast]
+#### YAML files
+[![asciicast]
+#### Nested files
+[![asciicast]
+#### Plain output
+[![asciicast]
+#### JSON output
+[![asciicast]
