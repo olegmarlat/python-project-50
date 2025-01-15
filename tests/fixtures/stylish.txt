@@ -2,7 +2,7 @@
     common:{
       + follow: false
         setting1: Value1
-      - settin2: 200
+      - setting2: 200
       - setting3: true
       + setting3: null
       + setting4: blah blah
@@ -16,7 +16,7 @@
             }
             key: value
           + ops: vops
-       }
+        }
     }
     group1: {
       - baz: bas
