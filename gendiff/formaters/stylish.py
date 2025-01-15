@@ -2,7 +2,6 @@ def generate_indent(depth):
     indent_size = 4
     return ' ' * (depth * indent_size)
 
-
 def format_value(value, indent_level):
     indent = generate_indent(indent_level)
     if isinstance(value, dict):
