@@ -1,39 +1,49 @@
-def build_diff(d1, d2):
+def build_diff(dict1, dict2):
     diff = []
-    all_keys = set(d1.keys()).union(d2.keys())
+    all_keys = set(dict1.keys()).union(dict2.keys())
 
     for key in sorted(all_keys):
-        if key not in d2:
-            diff.append({
-                'key': key,
-                'status': 'removed',
-                'old_value': d1[key]
-            })
-        elif key not in d1:
-            diff.append({
-                'key': key,
-                'status': 'added',
-                'new_value': d2[key]
-            })
-        elif isinstance(d1[key], dict) and isinstance(d2[key], dict):
-            nested_diff = build_diff(d1[key], d2[key])
-            diff.append({
-                'key': key,
-                'status': 'nested',
-                'nested': nested_diff
-            })
-        elif d1[key] != d2[key]:
-            diff.append({
-                'key': key,
-                'status': 'updated',
-                'old_value': d1[key],
-                'new_value': d2[key]
-            })
+        if key not in dict2:
+            diff.append(
+                {
+                    "key": key,
+                    "status": "removed",
+                    "old_value": dict1[key]
+                }
+            )
+        elif key not in dict1:
+            diff.append(
+                {
+                    "key": key,
+                    "status": "added",
+                    "new_value": dict2[key]
+                }
+            )
+        elif isinstance(dict1[key], dict) and isinstance(dict2[key], dict):
+            nested_diff = build_diff(dict1[key], dict2[key])
+            diff.append(
+                {
+                    "key": key,
+                    "status": "nested",
+                    "nested": nested_diff
+                }
+            )
+        elif dict1[key] != dict2[key]:
+            diff.append(
+                {
+                    "key": key,
+                    "status": "updated",
+                    "old_value": dict1[key],
+                    "new_value": dict2[key],
+                }
+            )
         else:
-            diff.append({
-                'key': key,
-                'status': 'unchanged',
-                'old_value': d1[key]
-            })
+            diff.append(
+                {
+                    "key": key,
+                    "status": "unchanged",
+                    "old_value": dict1[key]
+                }
+            )
 
     return diff
