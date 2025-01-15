@@ -9,8 +9,8 @@ def get_continuation(file_path):
     return os.path.splitext(file_path)[1][1:]
 
 
-def generate_diff(file1_path, file2_path, format="stylish"):
-    dict_1 = get_data(file1_path)
-    dict_2 = get_data(file2_path)
+def generate_diff(file_1, file_2, format="stylish"):
+    dict_1 = get_data(file_1)
+    dict_2 = get_data(file_2)
     diff = build_diff(dict_1, dict_2)
     return format_diff(diff, format)
