@@ -23,7 +23,8 @@ def generate_messages(diff, path=""):
         elif status == "added":
             formatted_value = format_value(item["new_value"])
             message = (
-                f"Property '{full_path}' was added with value: " f"{formatted_value}"
+                f"Property '{full_path}' was added with value: "
+                f"{formatted_value}"
             )
             messages.append(message)
         elif status == "removed":
