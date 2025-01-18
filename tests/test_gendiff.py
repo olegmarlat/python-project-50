@@ -8,8 +8,8 @@ BASE_DIR = Path(__file__).parent
 
 @pytest.mark.parametrize("file_1, file_2, expected, format", [
     (
-        "file3.json",
-        "file4.json",
+        "file_1.json",
+        "file_2.json",
         "stylish.txt",
         "stylish"
     ),
@@ -19,8 +19,8 @@ BASE_DIR = Path(__file__).parent
         "stylish.txt",
         "stylish"),
     (
-        "file3.json",
-        "file4.json",
+        "file_1.json",
+        "file_2.json",
         "plain.txt",
         "plain"
     ),
@@ -31,8 +31,8 @@ BASE_DIR = Path(__file__).parent
         "plain"
     ),
     (
-        "file3.json",
-        "file4.json",
+        "file_1.json",
+        "file_2.json",
         "json.txt",
         "json"
     ),
