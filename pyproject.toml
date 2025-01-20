@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Shows the difference between two files"
 authors = ["Oleg Latypov <latol179@mail.ru>"]
 readme = "README.md"
 packages = [{include = "gendiff"}]
