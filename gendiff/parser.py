@@ -22,5 +22,5 @@ def get_data(file_path):
         return parse_data(file.read(), extension)
 
 
-def get_continuation(file_path):
-    return os.path.splitext(file_path)[1][1:]
+# def get_continuation(file_path):
+#   return os.path.splitext(file_path)[1][1:]
