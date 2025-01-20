@@ -32,5 +32,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: c0e3ebb2dd2ce3930d40fdd98b55235dd59096e83d45823fc765dbf18925f74f
         with:
-          pytest coverage: make test-coverage
+          coverageCommand: make test-coverage
           debug: true
