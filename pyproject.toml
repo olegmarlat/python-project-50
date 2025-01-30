@@ -11,7 +11,7 @@ python = "^3.10"
 pyaml = "^12.12.3"
 
 [tool.poetry.scripts]
-gendiff = "scripts.gendiff:main"
+gendiff = "gendiff.scripts.gendiff:main"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.4"
