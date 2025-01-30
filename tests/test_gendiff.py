@@ -1,7 +1,7 @@
 import pytest
 import os
 from pathlib import Path
-from gendiff import generate_diff
+from gendiff.gendiff import generate_diff
 
 BASE_DIR = Path(__file__).parent
 
