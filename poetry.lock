@@ -167,6 +167,19 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
+name = "pyaml"
+version = "12.12.5"
+description = "PyYAML-based module to produce pretty and readable YAML-serialized data"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyaml-12.12.5.tar.gz", hash = "sha256:d1b3b8091813d3b77f7bd63895938687657e8da41195ba7ae51cb1063539fa30"},
+]
+
+[package.dependencies]
+PyYAML = "*"
+
+[[package]]
 name = "pycodestyle"
 version = "2.11.1"
 description = "Python style guide checker"
@@ -334,4 +347,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "6dfe4111133a7a0899b4cbe9bd6ffe27e1e3dfbe60683254d595aad785885df1"
+content-hash = "068de4395902132135c98dea61a15271d622f4ce918ad39e197af801342ddc78"
