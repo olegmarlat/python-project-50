@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Shows the difference between two files"
 authors = ["Oleg Latypov <latol179@mail.ru>"]
 readme = "README.md"
-package = [{include = "gendiff"}]
+packages = [{include = "gendiff"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
