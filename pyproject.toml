@@ -8,7 +8,7 @@ packages = [{include = "gendiff"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pyaml = "^6.0"
+pyaml = "^12.12.3"
 
 [tool.poetry.scripts]
 gendiff = "scripts.gendiff:main"
