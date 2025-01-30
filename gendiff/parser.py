@@ -20,7 +20,3 @@ def get_data(file_path):
     extension = os.path.splitext(file_path)[1].lower()
     with open(file_path) as file:
         return parse_data(file.read(), extension)
-
-
-# def get_continuation(file_path):
-#   return os.path.splitext(file_path)[1][1:]

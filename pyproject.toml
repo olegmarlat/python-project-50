@@ -4,14 +4,14 @@ version = "0.1.0"
 description = "Shows the difference between two files"
 authors = ["Oleg Latypov <latol179@mail.ru>"]
 readme = "README.md"
-packages = [{include = "gendiff"}]
+package = [{include = "gendiff"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-PyYAML = "^6.0"
+pyaml = "^6.0"
 
 [tool.poetry.scripts]
-gendiff = "gendiff.scripts.gendiff:main"
+gendiff = "scripts.gendiff:main"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.4"
