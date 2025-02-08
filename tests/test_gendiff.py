@@ -14,8 +14,8 @@ BASE_DIR = Path(__file__).parent
         "stylish"
     ),
     (
-        "file5.yml",
-        "file6.yml",
+        "file_1.yml",
+        "file_2.yml",
         "stylish.txt",
         "stylish"
     ),
@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).parent
         "plain"
     ),
     (
-        "file5.yml",
-        "file6.yml",
+        "file_1.yml",
+        "file_2.yml",
         "plain.txt",
         "plain"
     ),
@@ -38,8 +38,8 @@ BASE_DIR = Path(__file__).parent
         "json"
     ),
     (
-        "file5.yml",
-        "file6.yml",
+        "file_1.yml",
+        "file_2.yml",
         "json.txt",
         "json"
     )
