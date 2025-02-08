@@ -17,9 +17,9 @@
 [![asciicast](https://asciinema.org/a/66uZxAMMgAlk0Zb93F4BDhHiH.svg)](https://asciinema.org/a/66uZxAMMgAlk0Zb93F4BDhHiH)
 #### YAML files
 [![asciicast](https://asciinema.org/a/ckJSfzpwjhsul06YmWBcv28LJ.svg)](https://asciinema.org/a/ckJSfzpwjhsul06YmWBcv28LJ)
-#### Nested files
-[![asciicast]
-#### Plain output
-[![asciicast]
-#### JSON output
-[![asciicast]
+
+#### Plain format
+[![asciicast](https://asciinema.org/a/p7qDFeI8D596B6mzxmbwZMuv7.svg)](https://asciinema.org/a/p7qDFeI8D596B6mzxmbwZMuv7)
+
+#### Json object
+[![asciicast](https://asciinema.org/a/DwQ4cY4HgIWGFJo9C2Ku9efvc.svg)](https://asciinema.org/a/DwQ4cY4HgIWGFJo9C2Ku9efvc)
