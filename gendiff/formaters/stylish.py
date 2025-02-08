@@ -20,6 +20,41 @@ def format_value(value, indent_level):
         return str(value)
 
 
+# def convert_to_stylish(diff, depth=1):
+#    indent = generate_indent(depth)
+#    result = []
+#
+#    for item in diff:
+#        key = item["key"]
+#        status = item["status"]
+#
+#        if status == "nested":
+#            nested = convert_to_stylish(item["nested"], depth + 1)
+#            result.append(f"{indent}{key}: {nested}")
+#        elif status == "added":
+#            new_value = format_value(item["new_value"], depth)
+#            result.append(f"{indent[:-2]}+ {key}: {new_value}")
+#        elif status == "removed":
+#            old_value = format_value(item["old_value"], depth)
+#            result.append(f"{indent[:-2]}- {key}: {old_value}")
+#        elif status == "updated":
+#            old_value = format_value(item["old_value"], depth)
+#            new_value = format_value(item["new_value"], depth)
+#            result.append(f"{indent[:-2]}- {key}: {old_value}")
+#            result.append(f"{indent[:-2]}+ {key}: {new_value}")
+#        elif status == "unchanged":
+#            old_value = format_value(item["old_value"], depth)
+#            result.append(f"{indent}{key}: {old_value}")
+#
+#   result_str = "\n".join(result)
+#    outer_indent = generate_indent(depth - 1)
+#
+#    if depth > 1:
+#        return f"{{\n{result_str}\n{outer_indent}}}"
+#    else:
+#        return f"{{\n{result_str}\n}}"
+
+
 def convert_to_stylish(diff, depth=1):
     indent = generate_indent(depth)
     result = []
@@ -27,29 +62,24 @@ def convert_to_stylish(diff, depth=1):
     for item in diff:
         key = item["key"]
         status = item["status"]
+        result.append(handle_status(item, key, status, indent, depth))
 
-        if status == "nested":
-            nested = convert_to_stylish(item["nested"], depth + 1)
-            result.append(f"{indent}{key}: {nested}")
-        elif status == "added":
-            new_value = format_value(item["new_value"], depth)
-            result.append(f"{indent[:-2]}+ {key}: {new_value}")
-        elif status == "removed":
-            old_value = format_value(item["old_value"], depth)
-            result.append(f"{indent[:-2]}- {key}: {old_value}")
-        elif status == "updated":
-            old_value = format_value(item["old_value"], depth)
-            new_value = format_value(item["new_value"], depth)
-            result.append(f"{indent[:-2]}- {key}: {old_value}")
-            result.append(f"{indent[:-2]}+ {key}: {new_value}")
-        elif status == "unchanged":
-            old_value = format_value(item["old_value"], depth)
-            result.append(f"{indent}{key}: {old_value}")
+    return "\n".join(result)
 
-    result_str = "\n".join(result)
-    outer_indent = generate_indent(depth - 1)
 
-    if depth > 1:
-        return f"{{\n{result_str}\n{outer_indent}}}"
-    else:
-        return f"{{\n{result_str}\n}}"
+def handle_status(item, key, status, indent, depth):
+    if status == "nested":
+        return f"{indent}{key}: {convert_to_stylish(item['nested'], depth + 1)}"
+    elif status == "added":
+        new_value = format_value(item["new_value"], depth)
+        return f"{indent[:-2]}+ {key}: {new_value}"
+    elif status == "removed":
+        old_value = format_value(item["old_value"], depth)
+        return f"{indent[:-2]}- {key}: {old_value}"
+    elif status == "updated":
+        old_value = format_value(item["old_value"], depth)
+        new_value = format_value(item["new_value"], depth)
+        return f"{indent[:-2]}- {key}: {old_value}\n{indent[:-2]}+ {key}: {new_value}"
+    elif status == "unchanged":
+        old_value = format_value(item["old_value"], depth)
+        return f"{indent}{key}: {old_value}"
