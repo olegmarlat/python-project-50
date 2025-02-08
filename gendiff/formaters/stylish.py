@@ -19,6 +19,7 @@ def format_value(value, indent_level):
     else:
         return str(value)
 
+
 def convert_to_stylish(diff, depth=1):
     indent = generate_indent(depth)
     result = []
