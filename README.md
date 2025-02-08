@@ -16,7 +16,7 @@
 #### JSON files
 [![asciicast](https://asciinema.org/a/66uZxAMMgAlk0Zb93F4BDhHiH.svg)](https://asciinema.org/a/66uZxAMMgAlk0Zb93F4BDhHiH)
 #### YAML files
-[![asciicast]
+[![asciicast](https://asciinema.org/a/ckJSfzpwjhsul06YmWBcv28LJ.svg)](https://asciinema.org/a/ckJSfzpwjhsul06YmWBcv28LJ)
 #### Nested files
 [![asciicast]
 #### Plain output
