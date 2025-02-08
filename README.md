@@ -14,7 +14,7 @@
 + `gendiff *first_file* *second_file* -f json`: diff is a json object.
 ### Demo
 #### JSON files
-[![asciicast]
+[![asciicast] (https://asciinema.org/a/66uZxAMMgAlk0Zb93F4BDhHiH)]( https://asciinema.org/a/66uZxAMMgAlk0Zb93F4BDhHiH)
 #### YAML files
 [![asciicast]
 #### Nested files
