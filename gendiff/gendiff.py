@@ -1,5 +1,5 @@
 from gendiff.parser import get_data
-from gendiff.build_diff import build_diff
+from gendiff.diff import build_diff
 from gendiff.formatting import format_diff
 
 
