@@ -32,8 +32,11 @@ jobs:
           coverageCommand: make test-coverage
           debug: true
 
+      - name: Run tests with coverage
+        run: pytest --cov=your_package --cov-report=term
+
       - name: Run linter and pytest
         run: |
-          make lint
+          make check
           
           
