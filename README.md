@@ -2,6 +2,8 @@
 [![Actions Status](https://github.com/olegmarlat/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/olegmarlat/python-project-50/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3746f37b938d760e3c51/maintainability)](https://codeclimate.com/github/olegmarlat/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3746f37b938d760e3c51/test_coverage)](https://codeclimate.com/github/olegmarlat/python-project-50/test_coverage)
+[![Python CI](https://github.com/olegmarlat/python-project-50/actions/workflows/main.yml/badge.svg)](https://github.com/olegmarlat/python-project-50/actions/workflows/main.yml)
+
 ### Description
 **_GENDIFF:_** this program designed to show the differences between two data structures.
 
