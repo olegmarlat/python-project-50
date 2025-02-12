@@ -19,7 +19,7 @@ test:
 	poetry run pytest
 
 test-coverage:
-	pytest --cov=gendiff --cov-report=term
+	poetry run pytest --cov=gendiff --cov-report=term
 
 
 check:
