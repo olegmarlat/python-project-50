@@ -11,7 +11,7 @@
       {
         "key": "setting1",
         "status": "unchanged",
-        "old_value": "Value1"
+        "old_value": "Value 1"
       },
       {
         "key": "setting2",
