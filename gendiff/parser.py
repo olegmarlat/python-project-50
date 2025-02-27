@@ -8,9 +8,9 @@ class ExtensionError(Exception):
 
 
 def parse_data(file, extension):
-    if extension == '.json':
+    if extension == 'json':
         return json.loads(file)
-    elif extension in ['.yml', '.yaml']:
+    elif extension in ['yml', 'yaml']:
         return yaml.load(file, Loader=yaml.Loader)
     else:
         raise ExtensionError(f'Unsupported file format: {extension}')
