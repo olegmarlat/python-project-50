@@ -51,4 +51,4 @@ def test_gendiff(file_1, file_2, expected, format):
 
     result = generate_diff(file_1_path, file_2_path, format)
     with open(expected_path, "r") as expected_file:
-        assert result == expected_file.read()
+        assert result == expected_file.read().rstrip("\n")
