@@ -18,5 +18,9 @@ def parse_data(file, extension):
 
 def get_data(file_path):
     extension = os.path.splitext(file_path)[1][1:].lower()
+    return parse_data(file_read, extension)
+
+
+def file_read(file_path):
     with open(file_path) as file:
-        return parse_data(file.read(), extension)
+        return file.read()
