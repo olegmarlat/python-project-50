@@ -31,7 +31,7 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
         with:
-          coverageCommand: pytest coverage
+          coverageCommand: make test-coverage
           debug: true
          
           
